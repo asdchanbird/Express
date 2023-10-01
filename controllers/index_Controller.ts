@@ -1,8 +1,9 @@
 import { TodoModel } from "../models/index_Model";
 
 export const TodoController = {
-    GetAll: () => {
-        const data = TodoModel.GetAll()
+    GetAll: async() => {
+        const data = await TodoModel.GetAll()
+        console.log(data,9898)
         return data
     },
     Get: (query: any) => {
